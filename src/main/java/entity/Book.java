@@ -1,23 +1,30 @@
+package entity;
+
 public class Book {
 
     private int id;
-   private String name;
-   private String yearOfPrint;
-   private  Author author;
+    private String name;
+    private int yearOfPrint;
+    private  int authorId;
 
-   //constructor
+    //constructor
 
 
     public Book() {
     }
 
-    public Book(int id, String name, String yearOfPrint, Author author) {
+    public Book(int id, String name, int yearOfPrint, int author) {
         this.id = id;
         this.name = name;
         this.yearOfPrint = yearOfPrint;
-        this.author = author;
+        this.authorId = author;
     }
 
+    public Book(String name, int yearOfPrint, int authorId) {
+        this.name = name;
+        this.yearOfPrint = yearOfPrint;
+        this.authorId = authorId;
+    }
     //setter and getter
 
 
@@ -37,20 +44,20 @@ public class Book {
         this.name = name;
     }
 
-    public String getYearOfPrint() {
+    public int getYearOfPrint() {
         return yearOfPrint;
     }
 
-    public void setYearOfPrint(String yearOfPrint) {
+    public void setYearOfPrint(int yearOfPrint) {
         this.yearOfPrint = yearOfPrint;
     }
 
-    public Author getAuthor() {
-        return author;
+    public int getAuthorId() {
+        return authorId;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public void setAuthorId(int authorId) {
+        this.authorId = authorId;
     }
 
     @Override
@@ -59,7 +66,7 @@ public class Book {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", yearOfPrint='" + yearOfPrint + '\'' +
-                ", author=" + author +
+                ", authorId=" + authorId +
                 '}';
     }
 }
