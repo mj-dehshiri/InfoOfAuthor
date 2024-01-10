@@ -1,4 +1,6 @@
 public class Book {
+
+    private int id;
    private String name;
    private String yearOfPrint;
    private  Author author;
@@ -9,13 +11,23 @@ public class Book {
     public Book() {
     }
 
-    public Book(String name, String yearOfPrint, Author author) {
+    public Book(int id, String name, String yearOfPrint, Author author) {
+        this.id = id;
         this.name = name;
         this.yearOfPrint = yearOfPrint;
         this.author = author;
     }
 
     //setter and getter
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -44,7 +56,8 @@ public class Book {
     @Override
     public String toString() {
         return "Book{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", yearOfPrint='" + yearOfPrint + '\'' +
                 ", author=" + author +
                 '}';
