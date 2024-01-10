@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class Author {
+    private int id;
     private String firstName;
     private String lastName;
     private int age;
@@ -12,7 +13,8 @@ public class Author {
     public Author() {
     }
 
-    public Author(String firstName, String lastName, int age, Book[] books) {
+    public Author(int id, String firstName, String lastName, int age, Book[] books) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -20,6 +22,15 @@ public class Author {
     }
 
     //getter and setter
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -56,7 +67,8 @@ public class Author {
     @Override
     public String toString() {
         return "Author{" +
-                "firstName='" + firstName + '\'' +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
                 ", books=" + Arrays.toString(books) +
