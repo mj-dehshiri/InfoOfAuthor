@@ -1,4 +1,6 @@
+package entity;
 import java.util.Arrays;
+import entity.Book;
 
 public class Author {
     private int id;
@@ -21,7 +23,14 @@ public class Author {
         this.books = books;
     }
 
-    //getter and setter
+    public Author(String firstName, String lastName, int age, Book[] books) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.books = books;
+    }
+
+//getter and setter
 
 
     public int getId() {
