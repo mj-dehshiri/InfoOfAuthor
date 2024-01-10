@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS Author(
 
 
 CREATE TABLE IF NOT EXISTS Book(
+    id SERIAL PRIMARY KEY ,
     name VARCHAR(255),
     year_of_print int,
     author_id int REFERENCES Author (id)
